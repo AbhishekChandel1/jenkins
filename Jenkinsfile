@@ -21,7 +21,7 @@ pipeline {
         }
         stage("Build") {
             steps {
-                sh "docker build -t abhishek7868/notejam2 jenkins/"
+                sh "docker build -f Dockerfile.app . -t abhishek7868/notejam2 "
             }
         }
         stage("Push-repo") {
