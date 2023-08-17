@@ -12,7 +12,7 @@ pipeline {
         }
         stage("Build") {
             steps {
-                sh "sudo docker build -f Dockerfile.app -t abhishek7868/notejam2 jenkins/"
+                sh "docker build -f Dockerfile.app -t abhishek7868/notejam2 jenkins/"
             }
         }
         stage("Push-repo") {
