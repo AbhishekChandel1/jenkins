@@ -1,7 +1,7 @@
 # Use an appropriate base image for your application
 FROM python:2.7
 
-ENV DockerHOME=/home/app/webapp
+ENV DockerHOME=/home/app/jenkins
 
 # Set environment variables
 
