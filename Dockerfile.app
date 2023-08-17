@@ -1,7 +1,7 @@
 # Use an appropriate base image for your application
 FROM python:2.7
 
-ENV DockerHOME=home/
+ENV DockerHOME=/home/app/webapp
 
 # Set environment variables
 
