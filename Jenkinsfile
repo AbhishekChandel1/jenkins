@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t abhishek7868/notejam2 .'
+        sh 'docker build -t abhishek7868/notejam2 /jenkins'
       }
     }
     stage('Login') {
