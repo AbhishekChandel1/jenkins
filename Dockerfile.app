@@ -1,7 +1,7 @@
 # Use an appropriate base image for your application
 FROM python:2.7
 
-ENV JENKINS_HOME=/var/lib/jenkins
+ENV JENKINS_HOME=/home/jenkins_home
 
 # Set environment variables
 
