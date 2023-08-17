@@ -4,25 +4,15 @@ pipeline {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub')
     }
     stages {
-        stage("Clean-up") {
+        stage("Prepare") {
             steps {
                 deleteDir()
-            }
-        }
-        stage("Clone repo") {
-            steps {
                 sh "git clone https://github.com/AbhishekChandel1/jenkins/"
-            }
-        }
-        stage("Log-in") {
-            steps {
-                sh '$HOME:/home/jenkins'
-                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
             }
         }
         stage("Build") {
             steps {
-                sh "docker build -f Dockerfile.app . -t abhishek7868/notejam2 "
+                sh "docker build -t abhishek7868/notejam2 jenkins/"
             }
         }
         stage("Push-repo") {
